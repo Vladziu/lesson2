@@ -4,7 +4,14 @@
 
 void main ()
 {
-	printf ("Witaj! Oto lekcja 1: \n\n");
-	pobieranie();
+		unsigned int liczba;
+		printf ("Podaj liczbe: ");
+	// tu pobiera
+	scanf ("%u", &liczba);
+	printf ("\n");
+	
+	my_print(liczba);
+	score(liczba);
+	first(liczba);
 
 }
