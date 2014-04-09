@@ -11,6 +11,7 @@ void main ()
 	printf ("\n");
 	
 	my_print(liczba);
+	set_bit(liczba);
 	score(liczba);
 	first(liczba);
 

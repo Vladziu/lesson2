@@ -22,17 +22,46 @@ void my_print (unsigned int val)
 
 }
 
-void set_bit (unsigned int *val, unsigned int bit)
+void set_bit (unsigned int val, unsigned int bit)
 {
+
+	unsigned int c, a, o, x;
+	
+	printf ("Podaj bit do ktory chcesz zmieniac: ");
+	scanf ("%u", &bit);
+	a = (val) & (1 << (bit));
+	o = (val) |= (1 << (bit));
+	
+	printf ("AND: ");
+	for (c = 1; c <= BITS_IN_INT; c++)
+	{
+		printf("%u",(a >> (BITS_IN_INT - c) & 1));
+	}
+	printf("\n");
+	
+	printf ("OR: ");
+	for (c = 1; c <= BITS_IN_INT; c++)
+	{
+		printf("%u",(o >> (BITS_IN_INT - c) & 1));
+	}
+	printf("\n");
 	
 	// and & or | xor ^
+
 	
 }
 
 void score (unsigned int val)
 {
 	
-	// i++ , printf i
+	unsigned int count;
+
+	while (val)
+	{
+		val &= (val-1);
+		count++;
+	}
+	printf ("Liczba sklada sie z %u bitow", count);
 	
 }
 
