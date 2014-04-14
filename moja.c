@@ -80,13 +80,15 @@ void first (unsigned int val)
 	
 	unsigned int count = 0;
 	
-	while (val >> 1 != 0)
+	while (31 >> 1 != 0)
 	{
 	count++;
-	val = val >> 1;
 	}
 	
 	printf("Najstarszy bit jest na pozycji: %u",count);
 	printf ("\n");
 	
 }
+
+// nie robiæ pêtli 3x tylko u¿yæ f my print
+// wywaliæ a, o, x i wstawiæ to do pêtli, bo tak sobie podmieniam wartosc
