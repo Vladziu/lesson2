@@ -4,18 +4,21 @@
 
 void main ()
 {
-		unsigned int liczba;
-		printf ("Podaj liczbe: ");
+	unsigned int liczba, bit;
+	printf ("Podaj liczbe: ");
 	// tu pobiera
 	scanf ("%u", &liczba);
 	printf ("\n");
 	
 	my_print(liczba);
-	set_bit(liczba);
+	
+	printf ("Podaj bit do ktory chcesz zmieniac: ");
+	scanf ("%u", &bit);
+	
+	set_bit(liczba,bit);
 	score(liczba);
-	first(liczba);
+//	first(liczba);
 	
 	printf ("\n");
-	printf ("wszystko poszlo by lepiej tylko zapomnialem, ze pozycja 1 to tak na prawde pozycja 0, itd...");
 
 }
